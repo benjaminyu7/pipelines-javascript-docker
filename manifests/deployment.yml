@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: benjaminyupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: benjaminyupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: benjaminyupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: benjaminyupipelinesjavascriptdocker 
+          image: benyucontainerregistry.azurecr.io/benjaminyupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
